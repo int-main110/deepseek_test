@@ -8,9 +8,14 @@
 
 ```
 e:\test1/
-├── weather.html    # Web 网页版（前端 UI）
-├── weather.js      # Node.js 命令行版
-└── weather.py      # Python 命令行版
+├── web/
+│   └── index.html          # Web 网页版（前端 UI）
+├── cli/
+│   ├── js/
+│   │   └── weather.js      # Node.js 命令行版
+│   └── python/
+│       └── weather.py      # Python 命令行版
+└── README.md
 ```
 
 ---
@@ -32,7 +37,7 @@ e:\test1/
 
 ### 🚀 使用方法
 
-直接在浏览器中打开 `weather.html` 即可，默认加载**北京**天气。
+直接在浏览器中打开 `web/index.html` 即可，默认加载**北京**天气。
 
 ### 🛠 技术实现
 
@@ -60,13 +65,13 @@ e:\test1/
 
 ```bash
 # 基本查询
-node weather.js 北京
+node cli/js/weather.js 北京
 
 # 指定预报天数（最多 16 天）
-node weather.js "New York" --days 5
+node cli/js/weather.js "New York" --days 5
 
 # 只显示当前天气，不显示预报
-node weather.js 东京 --no-daily
+node cli/js/weather.js 东京 --no-daily
 ```
 
 ### 📋 参数说明
@@ -113,13 +118,13 @@ node weather.js 东京 --no-daily
 
 ```bash
 # 基本查询
-python weather.py 北京
+python cli/python/weather.py 北京
 
 # 指定预报天数
-python weather.py "San Francisco" --days 5
+python cli/python/weather.py "San Francisco" --days 5
 
 # 只显示当前天气
-python weather.py 东京 --no-daily
+python cli/python/weather.py 东京 --no-daily
 ```
 
 ### 📋 参数说明
